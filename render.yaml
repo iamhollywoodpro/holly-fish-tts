@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: holly-fish-tts
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: HOLLY_VOICE_MODEL
+        value: fishaudio/fish-speech-1.5
+      - key: HOLLY_VOICE_SPEAKER
+        value: female_warm_confident
+    healthCheckPath: /health
+    autoDeploy: true
