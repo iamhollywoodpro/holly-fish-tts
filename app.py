@@ -12,7 +12,7 @@ from typing import Optional
 import io
 import soundfile as sf
 
-from holly_fish_voice_cloud import get_holly_voice, HOLLY_VOICE_DESCRIPTION
+from holly_gtts_voice import get_holly_voice, HOLLY_VOICE_DESCRIPTION
 
 # Initialize FastAPI
 app = FastAPI(
